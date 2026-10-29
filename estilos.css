@@ -1,0 +1,152 @@
+
+:root {
+  --color-principal: #2457a7;
+  --color-principal-hover: #193f7a;
+  --color-fondo: #f3f6fb;
+  --color-tarjeta: #ffffff;
+  --color-texto: #202938;
+  --color-borde: #667085;
+  --color-exito: #176b3a;
+  --color-error: #b42318;
+  --espacio: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--espacio);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+.contenedor {
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 24px;
+  background: var(--color-tarjeta);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+label {
+  display: block;
+  margin-top: var(--espacio);
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--color-texto);
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  min-height: 44px;
+  padding: 10px 16px;
+  margin-top: var(--espacio);
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  color: #ffffff;
+  background: var(--color-principal);
+}
+
+form button:hover {
+  background: var(--color-principal-hover);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #b45309;
+  outline-offset: 3px;
+}
+
+#mensaje {
+  min-height: 24px;
+  font-weight: bold;
+}
+
+#mensaje.exito {
+  color: var(--color-exito);
+}
+
+#mensaje.error {
+  color: var(--color-error);
+}
+
+.nota {
+  margin-top: var(--espacio);
+  padding: var(--espacio);
+  border: 1px solid #c7d2e2;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.nota h3 {
+  margin-top: 0;
+}
+
+.nota p {
+  white-space: pre-wrap;
+}
+
+.acciones-nota {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.acciones-nota button {
+  margin-top: 8px;
+  color: var(--color-texto);
+  background: #e7edf5;
+}
+
+.acciones-nota .eliminar {
+  color: #ffffff;
+  background: var(--color-error);
+}
+
+@media (max-width: 520px) {
+  .contenedor {
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
